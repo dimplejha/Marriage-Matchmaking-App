@@ -95,24 +95,26 @@ const deleteUser = async (req, res) => {
   }
 };
 
-
-
 const findMatches = async (req, res) => {
   const { id } = req.params;
   try {
+    // Find the user by ID
     const user = await User.findByPk(id);
-    if (user) {
-      const matches = await User.findAll({
-        where: {
-          city: user.city,
-          interests: user.interests,
-          gender: user.gender === 'male' ? 'female' : 'male',
-        },
-      });
-      return res.status(200).json(matches);
-    } else {
+    if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
+
+    // Find potential matches
+    const matches = await User.findAll({
+      where: {
+        city: user.city,
+        interests: user.interests,
+        gender: user.gender === 'male' ? 'female' : 'male',
+        isDeleted: false, // Ensure we don't match with deleted users
+      }
+    });
+
+    return res.status(200).json(matches);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
