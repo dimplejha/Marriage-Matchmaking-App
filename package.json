@@ -1,0 +1,19 @@
+{
+  "name": "urbenmatch",
+  "version": "1.0.0",
+  "description": "Marriage Matchmaking App <br>\r Brief Description <br>\r The Marriage Matchmaking App is a simple backend application designed to\r help users find potential matches based on their profile information. The app\r allows users to create, read, update, and delete profiles with details such as\r name, age, gender, email, city, and interests. <br>\r What is Provided? <br>\r This project provides a basic skeleton for a FastAPI-based backend application.\r The project can be found at this github repo: https://github.com/abhishek\u0002UM/UrbanMatch-PythonTask/tree/master\r The provided code includes: <br>\r Basic Project Structure:<br>\r • main.py : The main application file with basic CRUD operations for user\r profiles.<br>\r • models.py: SQLAlchemy models defining the User schema.<br>\r • database.py: Database configuration and setup.<br>\r • schemas.py: Pydantic schemas for data validation and serialization.\r Functionality:<br>\r • Create User Endpoint: Create a new user profile.<br>\r • Read Users Endpoint: Retrieve a list of user profiles.<br>\r • Read User by ID Endpoint: Retrieve a user profile by ID.<br>\r • SQLite Database: The application uses SQLite as the database to store\r user profiles.<br>\r What is Required?<br>\r Tasks:<br>\r 1. Add User Update Endpoint: <br>\r • Implement an endpoint to update user details by ID in the main.py\r file. <br>\r 2. Add User Deletion Endpoint:<br>\r • Implement an endpoint to delete a user profile by ID. <br>\r 3. Find Matches for a User: <br>\r • Implement an endpoint to find potential matches for a user based on\r their profile information. <br>\r 4. Add Email Validation:  <br>\r • Add validation to ensure the email field in user profiles contains valid\r email addresses.<br>\r 1\r Instructions:<br>\r Implement the required endpoints and email validation:<br>\r 1. Add the necessary code for the update, delete, match and validation end\u0002points<br>\r 2. Test Your Implementation:<br>\r 1. Verify that users can be updated and deleted correctly.<br>\r 2. Check that matches are correctly retrieved for a given user.<br>\r 3. Ensure email validation is working as expected.<br>\r Submit Your Work:<br>\r Provide the updated code files (main.py, models.py, database.py, and\r schemas.py). Include a brief report explaining your approach and any\r assumptions made. <br>\r Prerequisites <br>\r • Python 3.7+\r • FastAPI\r • SQLAlchemy\r • SQLite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "joi": "^17.13.3",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  }
+}
