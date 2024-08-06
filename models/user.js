@@ -27,6 +27,15 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  isDeleted: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+  },
+  deletedAt: {
+    type: DataTypes.DATE,
+  },
+}, {
+  timestamps: true,
 });
 
 module.exports = User;
